@@ -1,0 +1,90 @@
+/* ==========================================================
+ESTILOS CORPORATIVOS STOCKMASTER - Jhoanna, Jhoan y Kevin
+========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;700&family=PT+Serif:wght@700&display=swap');
+
+body {
+  background-color: #F5FAFA; /* Blanco hielo */
+  font-family: 'IBM Plex Serif', serif;
+  color: #526174; /* Gris pizarra */
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'PT Serif', serif;
+  font-size: 32px;
+  color: #172033; /* Gris carbón */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-family: 'PT Serif', serif;
+  font-size: 26px;
+  color: #172033; /* Gris carbón */
+  font-weight: 400;
+}
+
+p {
+  font-family: 'IBM Plex Serif', serif;
+  font-size: 20px;
+  color: #526174; /* Gris pizarra */
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.pt-serif-regular {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pt-serif-bold {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ibm-plex-serif-regular {
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tarjeta-producto {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(60, 70, 100, 0.12),
+              0 8px 24px rgba(60, 70, 100, 0.08);
+  border: 1px solid #E8EEF2; /* Gris claro corporativo */
+  padding: 20px 24px;
+  margin: 20px auto;
+  max-width: 600px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.tarjeta-producto:hover {
+  transform: translateY(-4px);
+}
+
+button {
+  background-color: #00AFA3; /* Turquesa profundo */
+  color: #F5FAFA; /* Blanco hielo */
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-family: 'IBM Plex Serif', serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 175, 163, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00C7B7; /* Verde esmeralda / menta vivo */
+}
