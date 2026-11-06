@@ -88,3 +88,13 @@ button {
 button:hover {
   background-color: #00C7B7; /* Verde esmeralda / menta vivo */
 }
+
+.imagen {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(60, 70, 100, 0.12),
+              0 8px 24px rgba(60, 70, 100, 0.08);
+  border: 1px solid rgba(230, 232, 240, 0.8);
+  padding: 20px 24px;
+  overflow: hidden;
+}
