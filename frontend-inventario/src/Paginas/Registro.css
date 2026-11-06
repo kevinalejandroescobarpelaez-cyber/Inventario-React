@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400&family=PT+Serif:wght@400;700&display=swap');
+
+.registro-contenedor {
+  font-family: 'IBM Plex Serif', serif;
+  color: #526174;
+  background-color: #F5FAFA;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.registro-titulo {
+  font-family: 'PT Serif', serif;
+  color: #172033;
+  font-weight: 700;
+  border-bottom: 2px solid #00C7B7;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.registro-subtitulo {
+  font-family: 'PT Serif', serif;
+  color: #172033;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.registro-btn-primario {
+  background-color: #00C7B7;
+  border-color: #00C7B7;
+  color: white;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.registro-btn-primario:hover {
+  background-color: #00AFA3;
+  border-color: #00AFA3;
+  color: white;
+}
+
+/* --- CONTENEDOR DE LA TABLA CON SCROLL HORIZONTAL Y VERTICAL --- */
+.registro-tabla-contenedor {
+  max-height: 80vh; 
+  overflow-y: auto; 
+  overflow-x: auto; 
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  background-color: white;
+  
+  /* Estilos del scroll para Firefox (auto en vez de thin para que sea grande) */
+  scrollbar-width: auto;
+  scrollbar-color: #00C7B7 #E8EEF2;
+}
+
+/* Estilos del scroll para Chrome, Safari y Edge */
+.registro-tabla-contenedor::-webkit-scrollbar {
+  width: 20px;  /* Scroll vertical grueso */
+  height: 28px; /* Scroll horizontal GIGANTE (fácil de agarrar) */
+}
+
+.registro-tabla-contenedor::-webkit-scrollbar-track {
+  background: #E8EEF2; /* Gris claro para que contraste con el fondo blanco */
+  border-radius: 10px;
+}
+
+.registro-tabla-contenedor::-webkit-scrollbar-thumb {
+  background-color: #00C7B7; /* Verde esmeralda sólido */
+  border-radius: 10px;
+  border: 2px solid #E8EEF2; /* Borde delgado solo para que se vea limpio */
+}
+
+.registro-tabla-contenedor::-webkit-scrollbar-thumb:hover {
+  background-color: #00AFA3; /* Turquesa profundo al pasar el mouse */
+}
+
+/* --- ESTILOS DE LA TABLA --- */
+.registro-tabla {
+  min-width: 900px; 
+  margin-bottom: 0; 
+}
+
+.registro-tabla th {
+  background-color: #E8EEF2;
+  color: #172033;
+  font-family: 'PT Serif', serif;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.registro-tabla td {
+  vertical-align: middle;
+  text-align: center;
+}
+.registro-tabla td:first-child, 
+.registro-tabla th:first-child {
+  text-align: left;
+}
+
+.registro-label-campo {
+  white-space: nowrap;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #172033;
+  margin-bottom: 0.3rem;
+}
+
+/* Estilos para los iconos de los inputs */
+.registro-icono-input {
+  background-color: #F5FAFA;
+  color: #00C7B7;
+  border-right: none;
+}
+.registro-icono-input i {
+  width: 16px;
+  text-align: center;
+}
+
+.registro-input-forzado {
+  min-width: 120px; 
+}
+
+.input-group .form-control {
+  border-left: none;
+}
+.input-group:focus-within {
+  box-shadow: 0 0 0 0.25rem rgba(0, 199, 183, 0.25);
+  border-radius: 0.375rem;
+}
+.input-group:focus-within .input-group-text,
+.input-group:focus-within .form-control {
+  border-color: #00C7B7;
+}
+
+.registro-error {
+  color: #dc3545;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+/* --- ESTILOS DE BOTONES EN LA TABLA (Paleta StockMaster) --- */
+.registro-btn-sumar-exacto {
+  background-color: #00C7B7;
+  border-color: #00C7B7;
+  color: white;
+}
+.registro-btn-sumar-exacto:hover {
+  background-color: #00AFA3;
+  border-color: #00AFA3;
+  color: white;
+}
+
+.registro-btn-restar-exacto {
+  background-color: #00AFA3;
+  border-color: #00AFA3;
+  color: white;
+}
+.registro-btn-restar-exacto:hover {
+  background-color: #172033;
+  border-color: #172033;
+  color: white;
+}
+
+.registro-btn-unidad {
+  color: #00AFA3;
+  border-color: #00AFA3;
+  background-color: transparent;
+}
+.registro-btn-unidad:hover {
+  background-color: #00AFA3;
+  color: white;
+}
+
+.registro-btn-editar {
+  color: #00AFA3;
+  border-color: #00AFA3;
+}
+.registro-btn-editar:hover {
+  background-color: #00AFA3;
+  color: white;
+}
