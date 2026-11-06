@@ -1,29 +1,29 @@
 
 import { useState, useEffect } from "react";
 import styles from './Inventario.module.css';
+import { obtenerProductos } from '../services/api';
 
 function Inventario() {
     const [inventario, setInventario] = useState([]);
     const [cargando, setCargando] = useState(true);
     const [error, setError] = useState(null);
 
-    /* Conexion a base de datos */
     useEffect(() => {
-        fetch("http://localhost:3000/api/productos")
-            .then((res) => {
-                if (!res.ok) throw new Error("Error al obtener los datos del servidor");
-                return res.json();
-            })
-            .then((data) => {
-                const productosConAlerta = data.map(item => ({ ...item, mensajeAlerta: "" }));
+        const cargarInventario = async () => {
+            try {
+                setCargando(true);
+                setError(null);
+                const datos = await obtenerProductos();
+                const productosConAlerta = datos.map(item => ({ ...item, mensajeAlerta: "" }));
                 setInventario(productosConAlerta);
+            } catch (err) {
+                setError(err.message || "No se pudo conectar con el servidor.");
+            } finally {
                 setCargando(false);
-            })
-            .catch((err) => {
-                console.error("Error:", err);
-                setError("No se pudo conectar con el servidor.");
-                setCargando(false);
-            });
+            }
+        };
+
+        cargarInventario();
     }, []);
 
     /* Traemos los datos que tenemos guardados en la base de datos */
