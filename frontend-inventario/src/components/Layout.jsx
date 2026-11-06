@@ -1,27 +1,18 @@
 import React from 'react';
 import logo from '../assets/logo.jpg';
+import './Layout.css';
 
 export default function Layout({ paginas, actual, cambiar, children }) {
   return (
     <>
-      <nav 
-        style={{ 
-          display: 'flex', 
-          justifyContent: 'space-between', 
-          alignItems: 'center', 
-          padding: '1rem 2rem',
-          backgroundColor: '#00AFa3', // Verde esmeralda corporativo
-          color: '#F5FAFA', // Blanco hielo
-          boxShadow: '0 2px 5px rgba(0,0,0,0.1)'
-        }}
-      >
+      <nav className="layout-nav">
         {/* Contenedor de Botones (Izquierda) */}
-        <div style={{ display: 'flex', gap: '1.5rem' }}>
+        <div className="layout-pages">
           {Object.entries(paginas).map(([id, pagina]) => (
           <button
             key={id}
             onClick={() => cambiar(id)}
-            style={{ fontWeight: id === actual ? 'bold' : 'normal' }}
+            className={id === actual ? 'layout-page layout-page-active' : 'layout-page'}
           >
             {pagina.titulo}
           </button>
@@ -29,25 +20,11 @@ export default function Layout({ paginas, actual, cambiar, children }) {
         </div>
 
         {/* Contenedor del Logo y Título (Derecha) */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <span 
-            style={{ 
-              fontFamily: '"PT Serif", serif', 
-              fontWeight: '700', 
-              fontSize: '22px' 
-            }}
-          >
+        <div className="layout-brand">
+          <span className="layout-brand-title">
             StockMaster
           </span>
-          <img 
-            src={logo} 
-            alt="Logo StockMaster" 
-            style={{ 
-              height: '40px', 
-              width: 'auto',
-              borderRadius: '4px' // Opcional, para suavizar los bordes
-            }} 
-          />
+          <img src={logo} alt="Logo StockMaster" className="layout-logo" />
         </div>
       </nav>
 

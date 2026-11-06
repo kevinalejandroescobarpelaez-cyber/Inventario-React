@@ -1,0 +1,60 @@
+.layout-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #00afa3;
+  color: #f5fafa;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.layout-pages {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.layout-page-active {
+  font-weight: bold;
+}
+
+.layout-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.layout-brand-title {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.layout-logo {
+  height: 40px;
+  width: auto;
+  border-radius: 4px;
+}
+
+@media (max-width: 640px) {
+  .layout-nav {
+    padding: 1rem;
+  }
+
+  .layout-pages {
+    gap: 0.75rem;
+  }
+
+  .layout-brand-title {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .layout-brand {
+    display: none;
+  }
+
+  .layout-pages {
+    gap: 0.5rem;
+  }
+}
